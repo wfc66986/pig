@@ -1,0 +1,76 @@
+//fade
+.fade-enter-active,
+.fade-leave-active {
+    transition: all 0.25s ease-in-out;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+}
+
+//ui-dialog-fade
+.ui-dialog-fade-enter-active {
+    animation: ui-dialog-fade-in 0.3s;
+}
+
+.ui-dialog-fade-leave-active {
+    animation: ui-dialog-fade-out 0.3s;
+}
+
+@keyframes ui-dialog-fade-in {
+    0% {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ui-dialog-fade-out {
+    0% {
+        transform: translateZ(0);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate3d(0, -20px, 0);
+        opacity: 0;
+    }
+}
+
+// zoom-in-out
+.zoomInOut-enter-active {
+    animation: zoomIn 0.3s;
+}
+.zoomInOut-leave-active {
+    animation: zoomOut 0.3s;
+}
+
+@keyframes zoomIn {
+    from {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    50% {
+      opacity: 1;
+    }
+}
+@keyframes zoomOut {
+    from {
+      opacity: 1;
+    }
+  
+    50% {
+      opacity: 0;
+      -webkit-transform: scale3d(0.3, 0.3, 0.3);
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    to {
+      opacity: 0;
+    }
+}
